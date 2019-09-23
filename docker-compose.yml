@@ -1,0 +1,12 @@
+version: '2'
+services:
+  clone:
+    image: twhtanghk/clonezilla
+    privileged: true
+#    network_mode: "host"
+#    command: apt-get install net-tools netcat -y
+    volumes:
+      - /dev:/dev
+      - /root/partimag:/home/partimag
+    environment:
+      - TERM=xterm
